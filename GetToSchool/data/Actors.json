@@ -1,0 +1,5 @@
+[
+null,
+{"id":1,"battlerName":"CreatedBattler","characterIndex":0,"characterName":"CreatedWalk","classId":2,"equips":[2,0,0,3,0],"faceIndex":0,"faceName":"CreatedCharacter","traits":[],"initialLevel":99,"maxLevel":99,"name":"Reid","nickname":"","note":"","profile":""},
+{"id":2,"battlerName":"","characterIndex":0,"characterName":"Nature","classId":9,"equips":[0,0,0,0,0],"faceIndex":0,"faceName":"Nature","traits":[],"initialLevel":1,"maxLevel":99,"name":"Butterdog","nickname":"Butters","note":"","profile":"Butterdog. The dog with the butter. Butterdog"}
+]
