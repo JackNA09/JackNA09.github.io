@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inconspicuous Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="none" href="css/dark.css">
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="content">
+        <div id="banner">
+            <h1>Get To School</h1>
+            <a href="index.html">Homepage</a> |
+            <a href="about.html">About Me</a> |
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+                <div class="post">
+                  <h2>Play My Game</h2>
+                  <p> Click <a href="GetToSchool/index.html">here</a> to play.</p>
+                    <p>I spent a lot of time trying to make many unique and fun encounters and scenarios. Each of the nine maps has its own specially created events and detailed enviroments.
+                    This game has a lot of fun and challenging boss battles that give you a reason to explore and find new, and valuable items. 
+                    There is a freedom of choice approach to the game,
+                    so you can shape your characters reputation and how he goes through the game. You can find new allies across the different maps,
+                     and if you interact with them correctly, they will join your party.
+                  </p>
+                 </div>
+                    <div class="gallery">
+                        <h2>Gallery</h2>
+                        <p> Here you can see some screenshots from the game. Each of these screenshots shows different parts of the game such as a boss battle, an interaction with an npc, and some of the maps.
+                            These are put here to give you an idea of what the game would be like when you actually play it, although it is free so you wouldn't lose much by just giving it a try. 
+                            These images show are only a sample of what actually happens in the game, so when you actually play it you will have much more content to explore than these images show.
+                        </p>
+                    <a href="img/game.png"> <img src="img/game.png" alt=""> </a>
+                    <a href="img/fight.png"> <img src="img/fight.png" alt=""> </a>
+                    <a href="img/doggy.png"> <img src="img/doggy.png" alt=""> </a>
+                    <a href="img/gurd.png"> <img src="img/gurd.png" alt=""> </a>
+                    <a href="img/ciminal.png"> <img src="img/ciminal.png" alt=""> </a>
+                    <a href="img/stelar.png"> <img src="img/stelar.png" alt=""> </a>
+                 
+    </div>
+</body>
+<script>
+    var lightMode= true;
+
+    function changeSheet() {
+        // make lightMode = NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet");
+        var darkSheet = document.getElementById("darkSheet");
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning light mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+    }
+</script>
+</html>

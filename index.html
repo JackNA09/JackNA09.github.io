@@ -1,18 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Inconspicuous Site</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="none" href="css/dark.css">
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
 </head>
+
 <body>
     <div id="content">
-    <h1> This is a non-suspicious website </h1>
-    <p>Click the image below to play my game</p>
-    <a href="GetToSchool/index.html">
-        <img src="img/Arthur_Morgan (1).jpg" alt="A good man">
-    </a>
-    </div>
+        <div id="banner">
+            <h1>Homepage</h1>
+            <a href="about.html">About Me</a> |
+            <a href="gameguide.html">Get To School</a>
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+
+        <div id="blogpost">
+            <div class="post1">
+                <h2>About Me</h2>
+                <p>My name is Jackson Ambrose, I made this game as part of a project.</p>
+                <p>Click <a href="about.html">here</a> to learn more.</p>
+            </div>
+            <div class="post2">
+                <h2 style="display: inline;">Get To School</h2>
+                <img src="img/start.png" alt="Game loading screen" class="left">
+                <p>Get To School is a rpg-like videogame that follows a young boy trying to make his way to school, without being killed by numerous critters and creatures along the way. </p>
+                <p>Click <a href="gameguide.html">here</a> to learn more.</p>
+            </div>
+ </div>
 </body>
+
+<script>
+    var lightMode= true;
+
+    function changeSheet() {
+        // make lightMode = NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet");
+        var darkSheet = document.getElementById("darkSheet");
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning light mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+    }
+</script>
 </html>

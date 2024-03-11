@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Inconspicuous Site</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link id="darkSheet" rel="stylesheet" media="none" href="css/dark.css">
+    <link id="lightSheet" rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div id="content">
+        <div id="banner">
+            <h1>About Me</h1>
+            <a href="index.html">Homepage</a> |
+            <a href="gameguide.html">Get To School</a>
+            <a href="#" onclick="changeSheet()">Change Mode</a>
+        </div>
+
+        <div id="blogpost2">
+          <div class="post">
+            <h2>About Me</h2>
+            <p>My name is Jackson Ambrose, I made this game as part of a project.This game was made over the course of two months so it is very short and primitive.
+                I am a big gamer and have been playing games since I was a toddler, so the chance to make a game was very exciting to me. I love storytelling and hope to become a succesful writer,
+                so this game gave me an oppurtunity to grow my skills in writing by making an interesting story based off a simple concept like going to school.
+            </p>
+        </div>
+            <div class="postwhy">
+             <h2>Why I made this game</h2>
+             <p>
+                I made this game as part of a school project, so a lot of the features you see are things that I was taught how to do using the RPG Maker software. most of the maps, items,
+                 enemies, or anything else you see in the game is created by me, using the limited time I had in class. This website is also a product of what I learned in my class, and 
+                 it also took a long time to create.
+             </p>
+        </div>
+</body>
+<script>
+    var lightMode= true;
+
+    function changeSheet() {
+        // make lightMode = NOT lightMode
+        lightMode = !lightMode;
+        var lightSheet = document.getElementById("lightSheet");
+        var darkSheet = document.getElementById("darkSheet");
+        // if lightMode turned off, display dark stylesheet
+        if (lightMode == false) {
+            console.log("Turning dark mode on...");
+            darkSheet.media = "";
+            lightSheet.media = "none";
+        } else {
+            console.log("Turning light mode on...");
+            darkSheet.media = "none";
+            lightSheet.media = "";
+        }
+    }
+</script>
+</html>
